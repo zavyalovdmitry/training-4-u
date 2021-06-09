@@ -1,0 +1,39 @@
+@import "~bootstrap/scss/bootstrap";
+
+$bg-color: white;
+$prodject-width: 1280px;
+$sidebar-width: 270px;
+
+* {
+  box-sizing: border-box;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+html, body, #root {
+   max-width: $prodject-width;
+   height: 100%; 
+   padding: 0; 
+   box-sizing: border-box;
+   background-color: $bg-color;
+   margin: 0 auto;
+}
+
+#root {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   min-height: 100vh;
+   position: relative;
+}
+
+.mainContent-wrap {
+  position: absolute;
+  left: $sidebar-width;
+  width: $prodject-width - $sidebar-width;
+  display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}

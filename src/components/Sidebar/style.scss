@@ -1,0 +1,15 @@
+@import '~react-pro-sidebar/dist/scss/styles.scss';
+
+$sidebar-bg-color: #242424;
+
+.sidebar__main {
+  background-color: $sidebar-bg-color;
+}
+
+.pro-sidebar {
+  position: fixed;
+}
+
+.pro-sidebar > .pro-sidebar-inner {
+  background-color: $sidebar-bg-color;
+}

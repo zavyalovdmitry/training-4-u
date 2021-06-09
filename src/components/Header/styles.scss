@@ -1,0 +1,57 @@
+@import "~bootstrap/scss/bootstrap";
+
+$header-width: 100%;
+$header-height: 107px;
+$name-size: 30px;
+
+.header {
+   width: $header-width;
+   height: $header-height;
+   background-color: #f6f7fb;
+   display: flex;
+   padding: 30px 40px 0 40px;
+   margin: 0 auto;
+   justify-content: space-between;
+   position: relative;
+}
+
+.nameProdject {
+   font-family: Circe, sans-serif;
+   margin:0;
+   font-size: $name-size;
+   display: inline-block;
+
+}
+
+.bi-list {
+   margin: -11px 0 0 0;
+}
+
+.client-menu {
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: flex;
+   height:720px;
+   width: 375px;
+   background-color: #f6f7fb;
+   padding: 107px 0 0 0;
+   display: flex;
+   justify-content: start;
+   flex-direction: column;
+   align-items: center;
+}
+
+.bi-backspace {
+   position: absolute;
+   top: 33px;
+   left: 360px;
+}
+
+.paragraph-menu {
+   margin: 0 0 40px 0;
+}
+
+
+
+

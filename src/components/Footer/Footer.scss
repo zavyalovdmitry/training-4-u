@@ -1,0 +1,112 @@
+:root {
+  --footer-height: 100px;
+}
+
+$footer__bg: #242424;
+$logo__color:#909090;
+
+.footer {
+  background: $footer__bg;
+  height: var(--footer-height);
+  width: 100%;
+  padding: 0 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  flex: 0 0 auto;
+
+      .footer__social {
+      display: flex;
+      flex-wrap: nowrap;
+      max-width: 330px;
+      width: 100%;
+      justify-content: space-between;
+        a {
+           width: 40px;
+           height: 40px;
+           opacity: .6;
+           transition: opacity 0.5s;
+            &:hover {
+              opacity: 100%;
+            }
+        }
+
+       .footer__social__vk1 {
+          background-image: url('img/vk.svg');
+       }
+       .footer__social__vk2 {
+        background-image: url('img/vk_inverse.svg');
+       }
+       .footer__social__fb {
+        background-image: url('img/fb.svg');
+       }
+       .footer__social__ok {
+        background-image: url('img/ok.svg');
+       }
+       .footer__social__yt {
+        background-image: url('img/yt.svg');
+       }
+       .footer__social__insta {
+        background-image: url('img/insta.svg');
+       }
+    }
+    .footer__tel {
+      display: flex;
+      flex-flow: column;
+        a {
+          text-decoration: none;
+          font-size: 20px;
+          letter-spacing: 1px;
+          font-weight: 500;
+          color: white;
+          transition: color 0.5s;
+          &:hover {
+            color:$logo__color;
+          }
+        }
+
+        p:first-child {
+          color: $logo__color;
+          font-size: 16px;
+          letter-spacing: 1px;
+          margin-bottom: -5px;
+          }
+        .footer__tel__tel {
+          margin-left: 10px;
+        }
+      svg {
+        margin-top: -4px;
+        margin-left: 2px;
+        height: 22px;
+        width: 18px;
+        fill: currentColor;
+      }
+    }
+    .footer__logo {
+      color: $logo__color;
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-start;
+      align-items: baseline;
+      padding-left: 10px;
+      border: 1px solid $logo__color;
+      width: 100px;
+      height: 70px;
+      font-size: 14px;
+      font-weight: bold;
+       a {
+         text-decoration: none;
+         color: $logo__color;
+         transition: color 0.5s;
+         &:hover {
+           color: white;
+         }
+       }
+       p:first-child {
+         font-size: 34px;
+         margin-bottom: -12px;
+       }
+
+    }
+ }

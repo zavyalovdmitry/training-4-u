@@ -1,0 +1,19 @@
+.auth__card {
+   max-width: 380px;
+   margin: auto;
+   padding: 16px;
+
+   .auth__form {
+      & > * {
+         margin-bottom: 16px;
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+   }
+
+   .auth__reset-btn {
+      padding: 0;
+      box-shadow: none;
+   }
+}
