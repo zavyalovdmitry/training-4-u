@@ -1,27 +1,26 @@
-// const API = 'https://zda-cors-proxy.herokuapp.com/https://training-for-children.herokuapp.com/api'
-const API = 'http://localhost:8000/api'
+const API = 'http://localhost:8000/api';
 const HEADERS = {
-   'Content-Type': 'application/json;charset=utf-8'
-}
+  'Content-Type': 'application/json;charset=utf-8',
+};
 
 export const Auth = {
-   authorize: async ({ email, password }) => {
-      try {
-         const response = await fetch(`${API}/login`, {
-            method: 'POST',
-            headers: HEADERS,
-            body: JSON.stringify({ email, password })
-         })
-         if (response.ok) {
-            const data = await response.json()
-            sessionStorage.setItem('token', data.token)
-            return data.user
-         }
-      } catch (error) {
-         throw error
+  authorize: async ({ email, password }) => {
+    try {
+      const response = await fetch(`${API}/login`, {
+        method: 'POST',
+        headers: HEADERS,
+        body: JSON.stringify({ email, password }),
+      });
+      if (response.ok) {
+        const data = await response.json();
+        sessionStorage.setItem('token', data.token);
+        return data.user;
       }
-   }
-}
+    } catch (error) {
+      throw error;
+    }
+  },
+};
 
 // static user = async (user, url) => {
 //   const rawResponse = await fetch(this.homeApi + url, {
@@ -42,7 +41,7 @@ export const Auth = {
 //         method: 'POST',
 //         headers: HEADERS,
 //         body: JSON.stringify(user),
-//         credentials: 'same-origin', 
+//         credentials: 'same-origin',
 //     })
 //     if (response.ok) {
 //         const data = await response.json();
@@ -58,27 +57,27 @@ export const Register = async (user) => {
     const response = await fetch(`${API}/register`, {
       method: 'POST',
       vary: 'Origin,Access-Control-Request-Method',
-      body: JSON.stringify(user)
-    })
+      body: JSON.stringify(user),
+    });
     if (response.ok) {
-        const data = await response.json()
-        console.log(data);
-        return data
+      const data = await response.json();
+      console.log(data);
+      return data;
     }
   } catch (error) {
-    throw error
+    throw error;
   }
-}
+};
 
 export const Trainings = async () => {
   try {
-    const response = await fetch(`${API}/trainings`)
+    const response = await fetch(`${API}/trainings`);
     if (response.ok) {
-        const data = await response.json()
-        console.log(data);
-        return data
+      const data = await response.json();
+      console.log(data);
+      return data;
     }
   } catch (error) {
-    throw error
+    throw error;
   }
-}
+};
